@@ -1,1 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinMaster - Domine suas Finanças e Investimentos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        .pricing-card:hover {
+            transform: scale(1.02);
+        }
+        .pricing-popular {
+            position: relative;
+            overflow: hidden;
+        }
+        .pricing-popular::before {
+            content: "MAIS POPULAR";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #f59e0b;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px 10px;
+            transform: rotate(45deg) translate(25%, -50%);
+            transform-origin: bottom left;
+            width: 120px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header/Navbar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-chart-line text-blue-600 text-2xl mr-2"></i>
+                <span class="text-xl font-bold text-blue-600">FinMaster</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="font-medium hover:text-blue-600 transition">Início</a>
+                <a href="#" class="font-medium hover:text-blue-600 transition">Sobre</a>
+                <a href="#" class="font-medium hover:text-blue-600 transition">Conteúdo</a>
+                <a href="#" class="font-medium hover:text-blue-600 transition">Depoimentos</a>
+                <a href="#" class="font-medium hover:text-blue-600 transition">Contato</a>
+            </nav>
+            
+            <div class="hidden md:block">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition">
+                    Comece agora
+                </button>
+            </div>
+            
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Domine suas finanças e conquiste sua liberdade</h1>
+                <p class="text-xl mb-8 opacity-90">Aprenda com especialistas como investir, economizar e multiplicar seu dinheiro com nosso curso completo de finanças pessoais e investimentos.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://pay.kiwify.com.br/uvdqS6x" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-bold text-lg transition">
+                        Quero me inscrever
+                    </a>
+                    <button class="border-2 border-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-bold text-lg transition">
+                        Ver conteúdo
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Finanças e Investimentos" class="rounded-xl shadow-2xl w-full max-w-lg">
+                    <div class="absolute -bottom-5 -right-5 bg-white text-blue-600 p-4 rounded-lg shadow-lg hidden md:block">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold">4.9</div>
+                            <div class="flex justify-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="text-sm">Avaliação média</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">10.000+</div>
+                    <div class="text-gray-600">Alunos matriculados</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">98%</div>
+                    <div class="text-gray-600">Satisfação dos alunos</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">50+</div>
+                    <div class="text-gray-600">Horas de conteúdo</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">24/7</div>
+                    <div class="text-gray-600">Suporte especializado</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">O que você vai aprender</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Nosso curso abrange tudo o que você precisa saber para tomar decisões financeiras inteligentes e construir riqueza.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-wallet text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Orçamento Pessoal</h3>
+                    <p class="text-gray-600">Aprenda a controlar seus gastos, criar um orçamento eficiente e economizar dinheiro de forma inteligente.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-pie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Investimentos</h3>
+                    <p class="text-gray-600">Domine os principais tipos de investimentos: renda fixa, ações, fundos imobiliários e muito mais.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hand-holding-usd text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Renda Passiva</h3>
+                    <p class="text-gray-600">Descubra como criar fontes de renda passiva que trabalham para você enquanto você dorme.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Proteção Financeira</h3>
+                    <p class="text-gray-600">Aprenda a proteger seu patrimônio com seguros e estratégias de gestão de riscos.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-piggy-bank text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Aposentadoria</h3>
+                    <p class="text-gray-600">Planeje sua aposentadoria com tranquilidade e garanta um futuro financeiramente estável.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mentalidade Financeira</h3>
+                    <p class="text-gray-600">Desenvolva a mentalidade correta para lidar com dinheiro e tomar decisões financeiras acertadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Como funciona o curso</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Um método simples e eficaz para transformar sua vida financeira</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Aprendizado online" class="rounded-xl shadow-lg w-full max-w-lg">
+                        <div class="absolute -bottom-5 -left-5 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-3">
+                                    <i class="fas fa-play text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold">Assista uma aula grátis</div>
+                                    <div class="text-sm text-gray-600">5 minutos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="mb-8 flex">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600">
+                                <span class="text-xl font-bold">1</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Acesso imediato</h3>
+                            <p class="text-gray-600">Assim que se inscrever, você terá acesso completo a todas as aulas e materiais do curso.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8 flex">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600">
+                                <span class="text-xl font-bold">2</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Aulas práticas</h3>
+                            <p class="text-gray-600">Aprenda com videoaulas objetivas, exercícios práticos e estudos de caso reais.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8 flex">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 text-purple-600">
+                                <span class="text-xl font-bold">3</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Comunidade exclusiva</h3>
+                            <p class="text-gray-600">Participe do nosso grupo de alunos para networking, dúvidas e troca de experiências.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="flex-shrink-0 mr-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-yellow-100 text-yellow-600">
+                                <span class="text-xl font-bold">4</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Certificado</h3>
+                            <p class="text-gray-600">Ao concluir o curso, receba seu certificado de conclusão para comprovar seus conhecimentos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">O que nossos alunos dizem</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Veja como o FinMaster transformou a vida financeira de milhares de pessoas</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-500 text-sm">1 semana atrás</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Depois do curso, consegui organizar minhas finanças e já estou vendo os primeiros resultados dos investimentos que fiz. O conteúdo é muito didático e prático!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ana Silva" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Ana Silva</h4>
+                            <p class="text-gray-600 text-sm">Designer, 28 anos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-500 text-sm">3 semanas atrás</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Nunca imaginei que conseguiria entender sobre investimentos. As aulas são muito claras e os professores tiram todas as dúvidas. Recomendo muito!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Carlos Oliveira" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Carlos Oliveira</h4>
+                            <p class="text-gray-600 text-sm">Engenheiro, 35 anos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-500 text-sm">2 meses atrás</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Em 6 meses aplicando o que aprendi no curso, já consegui aumentar minha renda em 40% com investimentos. Valeu cada centavo investido!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Mariana Costa" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Mariana Costa</h4>
+                            <p class="text-gray-600 text-sm">Médica, 42 anos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nosso Plano</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Acesso completo por um preço acessível</p>
+            </div>
+            
+            <div class="max-w-md mx-auto">
+                <div class="pricing-card bg-white p-8 rounded-xl shadow-lg border-2 border-blue-500">
+                    <h3 class="text-xl font-bold mb-2">Plano Único</h3>
+                    <p class="text-gray-600 mb-6">Tudo que você precisa para começar</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">R$ 15</span>
+                        <span class="text-gray-500">/ mês</span>
+                    </div>
+                    <ul class="mb-8 space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Acesso a todas as aulas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Materiais complementares</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Comunidade exclusiva</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Suporte via WhatsApp</span>
+                        </li>
+                    </ul>
+                    <a href="https://pay.kiwify.com.br/uvdqS6x" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition">
+                        Assinar agora
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600">Pagamento seguro via PIX ou cartão de crédito</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Perguntas frequentes</h2>
+                <p class="text-xl text-gray-600">Tire suas dúvidas sobre o curso FinMaster</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium text-left">Para quem é este curso?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0 bg-white">
+                        <p class="text-gray-600">O curso FinMaster é para qualquer pessoa que queira melhorar sua educação financeira, desde iniciantes absolutos até quem já tem algum conhecimento mas deseja se aprofundar. Nosso conteúdo é estruturado para atender diferentes níveis de conhecimento.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium text-left">Por quanto tempo tenho acesso ao curso?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0 bg-white">
+                        <p class="text-gray-600">Você terá acesso vitalício a todas as aulas e materiais do curso, incluindo atualizações futuras que forem lançadas. Assim, você pode aprender no seu próprio ritmo e revisitar o conteúdo sempre que precisar.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium text-left">Preciso ter dinheiro para começar a investir?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0 bg-white">
+                        <p class="text-gray-600">Não! Um dos principais objetivos do curso é justamente ensinar como organizar suas finanças para que você possa começar a investir, independentemente do valor inicial. Ensinamos estratégias para diferentes realidades financeiras.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium text-left">O curso tem garantia?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0 bg-white">
+                        <p class="text-gray-600">Sim! Oferecemos uma garantia incondicional de 7 dias. Se dentro desse período você achar que o curso não é para você, basta nos avisar que devolvemos 100% do seu investimento, sem burocracia.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 bg-white hover:bg-gray-50 transition">
+                        <span class="text-lg font-medium text-left">Como faço para me inscrever?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0 bg-white">
+                        <p class="text-gray-600">Basta clicar em qualquer um dos botões "Quero me inscrever" nesta página, escolher o plano desejado e realizar o pagamento. Imediatamente após a confirmação do pagamento, você receberá por e-mail todos os dados de acesso à plataforma do curso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para transformar sua vida financeira?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Comece hoje mesmo e dê o primeiro passo rumo à sua liberdade financeira</p>
+            <a href="https://pay.kiwify.com.br/uvdqS6x" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg">
+                Quero me inscrever agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">FinMaster</span>
+                    </div>
+                    <p class="text-gray-400">O curso completo de finanças pessoais e investimentos para você conquistar sua liberdade financeira.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Links úteis</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Início</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Conteúdo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Depoimentos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Termos de uso</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Garantia</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contato</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-2"></i>
+                            <span class="text-gray-400">contato@finmaster.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-blue-400 mr-2"></i>
+                            <span class="text-gray-400">(62) 99632-7524</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp text-blue-400 mr-2"></i>
+                            <span class="text-gray-400">(11) 98765-4321</span>
+                        </li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 FinMaster. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Mobile Menu Toggle (placeholder - would need more implementation)
+        document.querySelector('.md\\:hidden').addEventListener('click', () => {
+            alert('Menu mobile seria aberto aqui');
+        });
+    </script>
+</body>
+</html>
